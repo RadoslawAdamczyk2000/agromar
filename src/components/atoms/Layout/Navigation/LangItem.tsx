@@ -1,12 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import LangItemWrapper from './styles/LangItemWrapper';
 const LangItem = ({path='/',title}:{path:string,title:string}) => {
     return(
-        <li>
+        <LangItemWrapper>
             <Link to={path}>
                 {title}
             </Link>
-        </li>
+        </LangItemWrapper>
     )
 }
 export default LangItem;

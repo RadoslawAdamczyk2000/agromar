@@ -7,7 +7,7 @@ const Poster = () => {
         allImageSharp(filter: {id: {eq: "5df6ddf6-2cfd-56e1-8c3d-88ae146a318c"}}) {
             edges {
             node {
-                gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG, formats: JPG)
+                gatsbyImageData(placeholder: TRACED_SVG, formats: JPG)
             }
             }
         }
@@ -15,15 +15,18 @@ const Poster = () => {
   `)
   const image = getImage(allImageSharp.edges[0].node.gatsbyImageData);
     return(
-        <div>
-            <GatsbyImage image={image} alt='Hero Image Agromar'/>
-            {/* <StaticImage 
-                src='../../../../assets/potatos-pixabay-01.jpg' 
-                placeholder='tracedSVG'
-                layout='fullWidth'
-                alt=''
-            /> */}
-        </div>
+        <GatsbyImage 
+            image={image} 
+            alt='Hero Image Agromar'
+            style={{
+                height:'100%',
+                objectFit:'cover',
+                objectPosition:'center',
+                position:'relative',
+                width:'100%',
+                zIndex:-1
+            }}
+        />
     )
 }
 export default Poster;

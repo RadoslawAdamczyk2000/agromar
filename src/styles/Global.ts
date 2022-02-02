@@ -6,6 +6,11 @@ const Global = createGlobalStyle`
         margin:0;
         padding:0;
     }
+    ::after,
+    ::before{
+        content:'';
+        position:absolute;
+    }
     a{
         color:inherit;
         outline:none;

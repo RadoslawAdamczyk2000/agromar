@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 const NavigationWrapper = styled.nav`
     align-items:center;
-    background-color:${({theme}) => theme.colors.background};
+    background-color:${({theme}) => theme.colors.white};
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
@@ -9,6 +9,7 @@ const NavigationWrapper = styled.nav`
     position:sticky;
     top:0;
     width:100%;
+    z-index:999;
     & > menu{
         display:grid;
         grid-template-columns:2fr 3fr 1fr;

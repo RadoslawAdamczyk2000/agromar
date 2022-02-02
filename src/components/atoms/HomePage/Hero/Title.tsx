@@ -1,7 +1,8 @@
 import React from 'react';
+import TitleWrapper from './styles/TitleWrapper';
 const Title = () => {
     return(
-        <div>
+        <TitleWrapper>
             <div>
                 <h1>
                     Agromar
@@ -10,6 +11,7 @@ const Title = () => {
                     Warzywa obrane
                 </h2>
             </div>
-        </div>
+        </TitleWrapper>
     )
 }
+export default Title;
