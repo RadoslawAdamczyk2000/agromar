@@ -7,7 +7,6 @@ const HomePage = ({data}) => {
   console.log(data.file.publicURL);
   return(
     <Layout>
-      <Poster/>
       <nav>
         <Link to='/'>
           <figure>
