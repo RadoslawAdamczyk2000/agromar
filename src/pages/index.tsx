@@ -2,10 +2,12 @@ import Layout from '../schemas/Layout';
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import Poster from '../components/atoms/HomePage/Hero/Poster';
 const HomePage = ({data}) => {
   console.log(data.file.publicURL);
   return(
     <Layout>
+      <Poster/>
       <nav>
         <Link to='/'>
           <figure>
