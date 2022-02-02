@@ -1,19 +1,26 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import LogoWrapper from './styles/LogoWrapper';
 const Logo = () => {
-    const data = useStaticQuery(
+    const {file} = useStaticQuery(
         graphql`
             {
-                file(name: {eq: "logo"}) {
+                file(name: {eq: "potato"}) {
+                    name
                     publicURL
                 }
             }
         `
     )
     return(
-        <figure>
-            <img src={data.file.publicURL} alt='Agromar Logo'/>
-        </figure>
+        <LogoWrapper>
+            <div>
+                <img src={file.publicURL} alt='Agromar Logo'/>
+            </div>
+            <figcaption>
+                Agromar
+            </figcaption>
+        </LogoWrapper>
     )
 }
 export default Logo;

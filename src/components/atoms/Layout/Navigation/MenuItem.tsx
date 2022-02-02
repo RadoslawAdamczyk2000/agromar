@@ -1,12 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import MenuItemWrapper from './styles/MenuItemWrapper';
 const MenuItem = ({path='/',title}:{path:string,title:string}) => {
     return(
-        <li>
+        <MenuItemWrapper>
             <Link to={path}>
                 {title}
             </Link>
-        </li>
+        </MenuItemWrapper>
     )
 }
 export default MenuItem;

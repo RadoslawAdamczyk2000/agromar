@@ -1,13 +1,14 @@
 import React from 'react';
 import MenuItem from '../../../atoms/Layout/Navigation/MenuItem';
-const Menu = () => {
+import MenuListWrapper from './styles/MenuListWrapper';
+const MenuList = () => {
     return(
-        <ul>
+        <MenuListWrapper>
             <MenuItem path='/' title='start'/>
             <MenuItem path='/' title='o nas'/>
             <MenuItem path='/' title='oferta'/>
             <MenuItem path='/' title='kontakt'/>
-        </ul>
+        </MenuListWrapper>
     )
 }
-export default Menu;
+export default MenuList;

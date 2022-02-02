@@ -36,5 +36,10 @@ const Global = createGlobalStyle`
     textarea{
         font-family:${({theme}) => theme.fonts.family.secondary};
     }
+    li,
+    ol,
+    ul{
+        list-style:none;
+    }
 `
 export default Global;
