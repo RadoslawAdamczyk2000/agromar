@@ -3,10 +3,11 @@ import Author from '../../../atoms/HomePage/Contact/Author';
 import Info from '../../../atoms/HomePage/Contact/Info';
 import Map from '../../../atoms/HomePage/Contact/Map';
 import Form from '../../../bacterias/HomePage/Contact/Form';
+import ContactWrapper from './styles/ContactWrapper';
 const Contact = () => {
     return(
-        <footer>
-            <div>
+        <ContactWrapper>
+            <div className='content'>
                 <div>
                     <Info/>
                     <Map/>
@@ -14,7 +15,7 @@ const Contact = () => {
                 <Form/>
             </div>
             <Author/>
-        </footer>
+        </ContactWrapper>
     )
 }
 export default Contact;
