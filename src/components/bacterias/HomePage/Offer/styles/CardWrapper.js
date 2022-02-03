@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 const CardWrapper = styled.div`
     background-color:${({theme}) => theme.colors.white};
+    box-shadow:0 0 1rem hsla(0,100%,0%,.5);
     margin:9rem auto;
     max-width:95vw;
     position:relative;

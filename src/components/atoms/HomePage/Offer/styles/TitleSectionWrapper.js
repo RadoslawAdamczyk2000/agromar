@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 const TitleSectionWrapper = styled.div`
     align-items:center;
+    background-attachment:fixed;
+    background-blend-mode:multiply;
     background-color:${({theme}) => theme.colors.emerald};
+    background-image:url('${({image}) => image}');
     display:flex;
     justify-content:center;
     height:8rem;

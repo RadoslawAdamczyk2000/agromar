@@ -4,7 +4,7 @@ import TitleSection from '../../../atoms/HomePage/Offer/TitleSection';
 import Card from '../../../bacterias/HomePage/Offer/Card';
 import CardsWrapper from './styles/CardsWrapper';
 const Cards = () => {
-    const {allImageSharp} = useStaticQuery(graphql`
+    const {allImageSharp,file} = useStaticQuery(graphql`
     {
       allImageSharp{
         edges {
@@ -18,12 +18,16 @@ const Cards = () => {
           }
         }
       }
+      file(name: {eq: "vegetable-outlines-4898185-removebg-preview"}) {
+        publicURL
+        name
+      }   
     }
     `)
     return(
         <>
             <TitleSection title='Oferta'/>
-            <CardsWrapper>
+            <CardsWrapper image={file.publicURL}>
                 <div>
                 <Card 
                     content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
