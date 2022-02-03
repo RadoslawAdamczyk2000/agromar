@@ -1,9 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { path } from '../../../../types/types';
 import PosterWrapper from './styles/PosterWrapper';
-const Poster = ({poster}:{poster:path}) => {
+const Poster = () => {
     const {allImageSharp} = useStaticQuery(graphql`
     {
       allImageSharp(filter: {id: {eq: "d3486549-24dc-5fb7-98fe-6f4640b6d830"}}) {

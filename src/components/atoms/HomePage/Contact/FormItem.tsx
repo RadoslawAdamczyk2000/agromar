@@ -1,14 +1,15 @@
 import React from 'react';
+import FormItemWrapper from './styles/FormItemWrapper';
 const FormItem = () => {
     return(
-        <div>
+        <FormItemWrapper>
             <label htmlFor='assdsa'>
                 Imię i nazwisko
             </label>
             <input 
                 type='text'
             />
-        </div>
+        </FormItemWrapper>
     )
 }
 export default FormItem;
