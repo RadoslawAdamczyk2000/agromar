@@ -1,14 +1,23 @@
 import styled from 'styled-components';
 const CardWrapper = styled.div`
     background-color:${({theme}) => theme.colors.white};
-    margin:2rem auto;
+    margin:9rem auto;
     max-width:95vw;
+    position:relative;
     width:50rem;
     & > .content{
         align-items:center;
         display:flex;
         flex-direction:column;
         justify-content:space-around;
+    }
+    &::after{
+        background-color:${({theme}) => theme.colors.white};
+        bottom:-3.5rem;
+        clip-path: polygon(100% 0, 100% 44%, 34% 99%, 0 100%, 0 0);
+     height:4rem;
+        max-width:95vw;
+        width:50rem;
     }
 `
 export default CardWrapper;

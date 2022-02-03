@@ -5,7 +5,7 @@ const CardsWrapper = styled.div`
     display:grid;
     grid-gap:1rem;
     grid-template-columns:repeat(2,1fr);
-    margin:5rem 0;
+    margin:0 0 5rem 0;
     padding:1rem;
     & > div:nth-of-type(odd){
         grid-column:1;
