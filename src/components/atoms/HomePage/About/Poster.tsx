@@ -13,7 +13,6 @@ const Poster = ({poster}:{poster:path}) => {
             gatsbyImageData(
               layout: CONSTRAINED
               placeholder: TRACED_SVG
-              quality: 8
               formats: JPG
             )
           }
