@@ -1,12 +1,13 @@
 import React from 'react';
 import { content } from '../../../../types/types';
-const ExtraContent = ({content}:{content:content}) => {
+import ExtraContentWrapper from './styles/ExtraContentWrapper';
+const ExtraContent = ({content,isOpen}:{content:content}) => {
     return(
-        <div>
+        <ExtraContentWrapper isOpen={isOpen}>
             <p>
                 {content}
             </p>
-        </div>
+        </ExtraContentWrapper>
     )
 }
 export default ExtraContent;

@@ -6,6 +6,7 @@ const MenuItemWrapper = styled.li`
     text-transform:uppercase;
     padding:.5rem 1.5rem;
     transition:.12s linear color;
+    &:focus,
     &:hover{
         color:${({theme}) => theme.colors.emerald};
     }

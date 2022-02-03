@@ -1,16 +1,18 @@
 import React from 'react';
 import { content } from '../../../../types/types';
-const Content = ({content}:{content:content}) => {
+import Button from './styles/Button';
+import ContentWrapper from './styles/ContentWrapper';
+const Content = ({behave,content}:{content:content}) => {
     return(
-        <div>
-            <p>
+        <ContentWrapper>
+            <p className='content'>
                 {/* TODO:  content pierwsze 500 znaków */}
                 {content}
             </p>
-            <button>
+            <Button onClick={behave}>
                 Zobacz więcej
-            </button>
-        </div>
+            </Button>
+        </ContentWrapper>
     )
 }
 export default Content;

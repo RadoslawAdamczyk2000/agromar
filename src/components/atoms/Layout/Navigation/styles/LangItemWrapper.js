@@ -29,6 +29,7 @@ const LangItemWrapper = styled.li`
             z-index:-1;
         }
     }
+    &:focus,
     &:hover{
         & > a{
             border-radius:2rem;
