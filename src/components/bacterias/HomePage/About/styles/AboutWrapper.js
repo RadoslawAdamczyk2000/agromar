@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 const AboutWrapper = styled.div`
-    margin:5rem auto;
+    margin:10rem auto;
     width:75vw;
     & > .content{
         display:grid;

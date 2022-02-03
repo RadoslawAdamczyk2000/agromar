@@ -17,7 +17,7 @@ const theme = {
             content:'2rem',
             navItem:'1.6rem',
             title:'10rem',
-            section:'1.5rem',
+            section:'4rem',
             subtitle:'5.3rem'
         },
         weights:{
