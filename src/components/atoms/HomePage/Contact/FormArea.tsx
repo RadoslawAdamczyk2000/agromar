@@ -1,13 +1,14 @@
 import React from 'react';
+import FormAreaWrapper from './styles/FormAreaWrapper';
 const FormArea = () => {
     return(
-        <div>
+        <FormAreaWrapper>
             <label htmlFor='assdsa'>
                 Imię i nazwisko
             </label>
             <textarea
             />
-        </div>
+        </FormAreaWrapper>
     )
 }
 export default FormArea;

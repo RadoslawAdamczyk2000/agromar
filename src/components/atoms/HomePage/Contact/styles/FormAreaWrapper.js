@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-const FormItemWrapper = styled.div`
-    align-items:center;
+const FormAreaWrapper = styled.div`
+align-items:center;
     display:flex;
-    height:4rem;
+    height:15rem;
     justify-content:center;
     margin:3rem auto;
     max-width:85%;
@@ -18,7 +18,7 @@ const FormItemWrapper = styled.div`
         position:absolute;
         top:calc(((1.6rem + 2 * .75rem) / 2 + 1rem) * (-1));
     }
-    & > input{
+    & > textarea{
         border-radius:1rem;
         color:${({theme}) => theme.colors.gray};
         font-size:1.8rem;
@@ -26,8 +26,8 @@ const FormItemWrapper = styled.div`
         flex-shrink:0;
         height:100%;
         outline:.25rem solid ${({theme}) => theme.colors.gray};
-        padding:0 1rem;
-        text-align:center;
+        padding:.8rem;
+        text-align:start;
         transition:.12s linear color,.12s linear outline;
         width:100%;
         &:focus,
@@ -42,6 +42,5 @@ const FormItemWrapper = styled.div`
             background-color:${({theme}) => theme.colors.emerald};
         }
     }
-
 `
-export default FormItemWrapper;
+export default FormAreaWrapper;
