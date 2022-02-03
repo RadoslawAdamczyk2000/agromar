@@ -7,10 +7,20 @@ const TitleWrapper = styled.div`
     top:0;
     width:100%;
     & > div{
-        background:red;
+        color:${({theme}) => theme.colors.white};
         margin:auto;
         max-width:95%;
+        text-shadow:0 0 2rem hsla(0,100%,0%,.5),0 0 1rem hsla(0,100%,0%,.5);
         width:55rem;
+        & > h1{
+            font-size:${({theme}) => theme.fonts.sizes.title};
+        }
+        & > h2{
+            font-size:${({theme}) => theme.fonts.sizes.subtitle};
+        }
+    }
+    @media only screen and (max-width:850px){
+        grid-template-columns:repeat(1,1fr);
     }
 `
 export default TitleWrapper;
