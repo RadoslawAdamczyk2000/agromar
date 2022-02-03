@@ -3,16 +3,16 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 const Poster = () => {
     const {allImageSharp} = useStaticQuery(graphql`
-    {
-        allImageSharp(filter: {id: {eq: "5df6ddf6-2cfd-56e1-8c3d-88ae146a318c"}}) {
-            edges {
-            node {
-                gatsbyImageData(placeholder: TRACED_SVG, formats: JPG)
-            }
+        {
+            allImageSharp(filter: {id: {eq: "5df6ddf6-2cfd-56e1-8c3d-88ae146a318c"}}) {
+                edges {
+                    node {
+                        gatsbyImageData(placeholder: TRACED_SVG, formats: JPG)
+                    }
+                }
             }
         }
-    }
-  `)
+    `)
   const image = getImage(allImageSharp.edges[0].node.gatsbyImageData);
     return(
         <GatsbyImage 

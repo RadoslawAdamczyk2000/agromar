@@ -12,9 +12,7 @@ const About = () => {
                 title='O nas'
             />
             <div className='content'>
-                <Poster 
-                    poster='https://cdn.pixabay.com/photo/2017/01/14/10/57/woman-1979272_960_720.jpg'
-                />
+                <Poster/>
                 <Content 
                     behave={() => setOpen(!isOpen)}
                     content='Rośliny warzywne, warzywa, jarzyny – rośliny jednoroczne, dwuletnie lub byliny, które w całości lub w części stanowią pokarm człowieka. Mogą być spożywane w stanie surowym lub po obróbce cieplnej. Częściami użytkowymi roślin warzywnych mogą być całe rośliny lub tylko: liście, owoce, bulwy, łodygi i korzenie.Rośliny warzywne, warzywa, jarzyny – rośliny jednoroczne, dwuletnie lub byliny, które w całości lub w części stanowią pokarm człowieka. Mogą być spożywane w stanie surowym lub po obróbce cieplnej. Częściami użytkowymi roślin warzywnych mogą być całe rośliny lub tylko: liście, owoce, bulwy, łodygi i korzenie.'

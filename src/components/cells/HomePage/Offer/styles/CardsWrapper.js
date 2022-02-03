@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import vegePng from '../../../../../assets/vegetable-outlines-4898185-removebg-preview.png';
 const CardsWrapper = styled.div`
     background-attachment:fixed;
     background-blend-mode:multiply;

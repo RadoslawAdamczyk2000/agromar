@@ -2,7 +2,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { title } from '../../../../types/types';
 import CardPosterWrapper from './styles/CardPosterWrapper';
-const CardPoster = ({poster,title}:{title:title}) => {
+const CardPoster = ({poster,title}:{poster:any,title:title}) => {
     const image = getImage(poster)
     return(
         <CardPosterWrapper>
