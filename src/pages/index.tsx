@@ -4,6 +4,7 @@ import Navigation from '../components/cells/Layout/Navigation';
 import Hero from '../components/bacterias/HomePage/Hero/Hero';
 import About from '../components/bacterias/HomePage/About/About';
 import Cards from '../components/cells/HomePage/Offer/Cards';
+import Contact from '../components/cells/HomePage/Contact/Contact';
 const HomePage = () => {
   return(
     <Layout>
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Hero/>
       <About/>
       <Cards/>
+      <Contact/>
     </Layout>
   )
 }

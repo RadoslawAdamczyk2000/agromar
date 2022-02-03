@@ -13,6 +13,7 @@ const CardPoster = ({poster,title}:{title:title}) => {
                     height:'100%',
                     objectFit:'cover',
                     objectPosition:'center',
+                    transition:'.2s linear transform',
                     width:'100%'
                 }}
             />

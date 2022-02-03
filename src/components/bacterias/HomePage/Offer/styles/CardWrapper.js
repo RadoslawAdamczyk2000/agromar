@@ -16,9 +16,13 @@ const CardWrapper = styled.div`
         background-color:${({theme}) => theme.colors.white};
         bottom:-3.5rem;
         clip-path: polygon(100% 0, 100% 44%, 34% 99%, 0 100%, 0 0);
-     height:4rem;
+        height:4rem;
         max-width:95vw;
         width:50rem;
+    }
+    &:focus > figure > *,
+    &:hover > figure > *{
+        transform:scale(1.5);
     }
 `
 export default CardWrapper;
