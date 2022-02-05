@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 const CardContentWrapper = styled.div`
     margin:1rem 0;
+    max-width:85vw;
     padding:.8rem;
     & > p{
         color:${({theme}) => theme.colors.gray};

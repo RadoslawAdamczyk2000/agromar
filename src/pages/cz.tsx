@@ -6,7 +6,7 @@ import About from '../components/bacterias/HomePage/About/About';
 import Cards from '../components/cells/HomePage/Offer/Cards';
 import Contact from '../components/cells/HomePage/Contact/Contact';
 import Onions from '../components/cells/HomePage/Onions/Onions';
-const HomePage = () => {
+const CzechPage = () => {
   return(
     <Layout>
       <Navigation/>
@@ -19,4 +19,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage;
+export default CzechPage;

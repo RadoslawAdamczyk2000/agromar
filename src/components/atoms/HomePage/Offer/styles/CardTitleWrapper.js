@@ -4,6 +4,7 @@ const CardTitleWrapper = styled.div`
     display:flex;
     justify-content:center;
     margin:.75rem 0;
+    max-width:85vw;
     padding:.5rem .8rem;
     width:100%;
     
