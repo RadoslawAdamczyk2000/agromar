@@ -3,37 +3,7 @@ import React from 'react';
 import TitleSection from '../../../atoms/HomePage/Offer/TitleSection';
 import Card from '../../../bacterias/HomePage/Offer/Card';
 import CardsWrapper from './styles/CardsWrapper';
-// allDatoCmsPageCz,allDatoCmsPagede,
-// allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
-//   edges {
-//     node {
-//       titleOfferCz
-//       offerCardCz {
-//         title
-//         content
-//         poster {
-//           gatsbyImageData
-//         }
-//       }
-//     }
-//   }
-// }
-// allDatoCmsPagede(filter: {id: {eq: "DatoCmsPagede-104825909-de"}}) {
-//   edges {
-//     node {
-//       titleOfferDe
-//       offerCardDe {
-//         title
-//         content
-//         poster {
-//           gatsbyImageData
-//         }
-//       }
-//     }
-//   }
-// }
 const Cards = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
-
   const {allDatoCmsPageCz,allDatoCmsPagede,allDatoCmsPagepl,file} = useStaticQuery(graphql`
   {
     allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
@@ -85,9 +55,20 @@ const Cards = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
 `)
     return(
         <>
-            <TitleSection title={allDatoCmsPagepl.edges[0].node.titleOfferPl}/>
+            {
+              cz &&
+              <TitleSection title={allDatoCmsPageCz.edges[0].node.titleOfferCz}/>
+            }
+            {
+              de &&
+              <TitleSection title={allDatoCmsPagede.edges[0].node.titleOfferDe}/>
+            }
+            {
+              pl &&
+              <TitleSection title={allDatoCmsPagepl.edges[0].node.titleOfferPl}/>
+            }
             <CardsWrapper image={file.publicURL}>
-                <div>
+                <div className='cards'>
                   {
                     pl &&
                     allDatoCmsPagepl.edges[0].node.offerCardPl.map( i =>
