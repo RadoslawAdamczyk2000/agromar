@@ -4,9 +4,7 @@ import CardContentWrapper from './styles/CardContentWrapper';
 const CardContent = ({content}:{content:content}) => {
     return(
         <CardContentWrapper>
-            <p>
-                {content}
-            </p>
+            <p dangerouslySetInnerHTML={{__html:content}}/>
         </CardContentWrapper>
     )
 }

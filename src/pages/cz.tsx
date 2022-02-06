@@ -55,7 +55,7 @@ const CzechPage = () => {
           poster={anotherItem.posterAboutCz.gatsbyImageData}
       />
       <Onions/>
-      <Cards/>
+      <Cards cz={true}/>
       <Contact/>
     </Layout>
   )

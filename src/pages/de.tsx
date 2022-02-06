@@ -54,7 +54,7 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         poster={anotherItem.posterAboutDe.gatsbyImageData}
       />
       <Onions/>
-      <Cards/>
+      <Cards de={true}/>
       <Contact/>
     </Layout>
   )

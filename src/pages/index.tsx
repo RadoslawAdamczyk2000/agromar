@@ -54,7 +54,7 @@ const HomePage = () => {
         poster={anotherItem.posterAboutPl.gatsbyImageData}
       />
       <Onions/>
-      <Cards/>
+      <Cards pl={true}/>
       <Contact/>
     </Layout>
   )
