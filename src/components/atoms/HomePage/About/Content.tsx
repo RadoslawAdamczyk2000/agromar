@@ -5,10 +5,11 @@ import ContentWrapper from './styles/ContentWrapper';
 const Content = ({behave,content}:{behave:Function,content:content}) => {
     return(
         <ContentWrapper>
-            <p className='content'>
-                {/* TODO:  content pierwsze 500 znaków */}
-                {content}
-            </p>
+            <p 
+                className='content' 
+                id='contentAbout' 
+                dangerouslySetInnerHTML={{__html:content}}
+            />
             <Button onClick={behave}>
                 Zobacz więcej
             </Button>

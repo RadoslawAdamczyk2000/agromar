@@ -20,6 +20,14 @@ const HomePage = () => {
             }
             title
             subtitle
+            titleAboutPl
+            contentAboutPl
+            extraContentAboutPl
+            posterAboutPl {
+              gatsbyImageData
+              path
+              url
+            }
           }
         }
       }
@@ -34,12 +42,17 @@ const HomePage = () => {
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation/>
+      <Navigation pl={true} />
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
       />
-      <About/>
+      <About
+        title={anotherItem.titleAboutPl}
+        content={anotherItem.contentAboutPl}
+        extraContent={anotherItem.extraContentAboutPl}
+        poster={anotherItem.posterAboutPl.gatsbyImageData}
+      />
       <Onions/>
       <Cards/>
       <Contact/>

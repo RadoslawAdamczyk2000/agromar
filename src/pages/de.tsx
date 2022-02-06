@@ -20,6 +20,14 @@ const DeutchPage = () => {
           }
           title
           subtitle
+          titleAboutDe
+          contentAboutDe
+          extraContentAboutDe
+          posterAboutDe {
+            url
+            gatsbyImageData
+            path
+          }
         }
       }
     }
@@ -34,12 +42,17 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation/>
+      <Navigation de={true}/>
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
       />
-      <About/>
+      <About
+        title={anotherItem.titleAboutDe}
+        content={anotherItem.contentAboutDe}
+        extraContent={anotherItem.extraContentAboutDe}
+        poster={anotherItem.posterAboutDe.gatsbyImageData}
+      />
       <Onions/>
       <Cards/>
       <Contact/>

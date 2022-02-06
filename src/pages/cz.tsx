@@ -20,6 +20,14 @@ const CzechPage = () => {
           }
           title
           subtitle
+          titleAboutCz
+          contentAboutCz
+          extraContentAboutCz
+          posterAboutCz {
+            path
+            gatsbyImageData
+            url
+          }
         }
       }
     }
@@ -35,12 +43,17 @@ const CzechPage = () => {
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation/>
+      <Navigation cz={true} />
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
       />
-      <About/>
+      <About
+          title={anotherItem.titleAboutCz}
+          content={anotherItem.contentAboutCz}
+          extraContent={anotherItem.extraContentAboutCz}
+          poster={anotherItem.posterAboutCz.gatsbyImageData}
+      />
       <Onions/>
       <Cards/>
       <Contact/>
