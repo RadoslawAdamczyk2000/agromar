@@ -6,11 +6,40 @@ import About from '../components/bacterias/HomePage/About/About';
 import Cards from '../components/cells/HomePage/Offer/Cards';
 import Contact from '../components/cells/HomePage/Contact/Contact';
 import Onions from '../components/cells/HomePage/Onions/Onions';
+import Seo from '../components/atoms/Layout/Seo';
+import { graphql, useStaticQuery } from 'gatsby';
 const CzechPage = () => {
+  const {allDatoCmsPageCz} = useStaticQuery(graphql`
+  {
+    allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
+      edges {
+        node {
+          seocz {
+            title
+            description
+          }
+          title
+          subtitle
+        }
+      }
+    }
+  }
+`)
+  const seoItem = allDatoCmsPageCz.edges[0].node.seocz;
+  const anotherItem = allDatoCmsPageCz.edges[0].node;
+
   return(
     <Layout>
+      <Seo
+        language='cs'
+        metaTitle={seoItem.title}
+        metaDescription={seoItem.description}
+      />
       <Navigation/>
-      <Hero/>
+      <Hero
+        title={anotherItem.title}
+        subtitle={anotherItem.subtitle}
+      />
       <About/>
       <Onions/>
       <Cards/>

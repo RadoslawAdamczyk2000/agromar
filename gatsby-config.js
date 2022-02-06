@@ -23,6 +23,13 @@ module.exports = {
           "name": "assets",
           "path": "./src/assets/"
         },
-      }
+      },
+      {
+        resolve: `gatsby-source-datocms`,
+        options: {
+          apiToken: `9db86f8fb614ba8eb5182dde80f799`,
+          environment: `main`,
+        },
+      },
   ]
 };

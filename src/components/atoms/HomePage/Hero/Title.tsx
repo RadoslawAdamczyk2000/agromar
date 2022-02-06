@@ -1,14 +1,14 @@
 import React from 'react';
 import TitleWrapper from './styles/TitleWrapper';
-const Title = () => {
+const Title = ({title,subtitle}) => {
     return(
         <TitleWrapper>
             <div>
                 <h1>
-                    Agromar
+                    {title}
                 </h1>
                 <h2>
-                    Warzywa obrane
+                    {subtitle}
                 </h2>
             </div>
         </TitleWrapper>
