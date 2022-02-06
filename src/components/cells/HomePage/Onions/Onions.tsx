@@ -15,6 +15,26 @@ const Onions = () => {
       }
     }
   `)
+
+    // const {allDatoCmsPageCz} = useStaticQuery(graphql`
+    //  allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
+    //     edges {
+    //       node {
+    //         titleOnionsCz
+    //         contentOnionsCz
+    //         onioncard {
+    //           title
+    //           posterCard {
+    //             gatsbyImageData
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+
+
+
+    // `)
     return(
         <OnionsWrapper>
             <Box/>

@@ -4,64 +4,70 @@ import TitleSection from '../../../atoms/HomePage/Offer/TitleSection';
 import Card from '../../../bacterias/HomePage/Offer/Card';
 import CardsWrapper from './styles/CardsWrapper';
 const Cards = () => {
-    const {allImageSharp,file} = useStaticQuery(graphql`
-    {
-      allImageSharp{
-        edges {
-          node {
-            id
-            gatsbyImageData(
-              layout: CONSTRAINED
-              placeholder: TRACED_SVG
-              formats: JPG
-            )
+
+      const {allDatoCmsPageCz,allDatoCmsPagede,allDatoCmsPagepl,file} = useStaticQuery(graphql`
+         allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
+            edges {
+              node {
+                titleOfferCz
+                offerCardCz {
+                  title
+                  content
+                  poster {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
           }
-        }
-      }
-      file(name: {eq: "vegetable-outlines-4898185-removebg-preview"}) {
-        publicURL
-        name
-      }   
-    }
-    `)
+        #   allDatoCmsPagede(filter: {id: {eq: "DatoCmsPagede-104825909-de"}}) {
+        #     edges {
+        #       node {
+        #         titleOfferDe
+        #         offerCardDe {
+        #           title
+        #           content
+        #           poster {
+        #             gatsbyImageData
+        #           }
+        #         }
+        #       }
+        #     }
+        #   }
+          allDatoCmsPagepl(filter: {id: {eq: "DatoCmsPagepl-104808178-pl"}}) {
+            edges {
+              node {
+                titleOfferPl
+                offerCardPl {
+                  content
+                  title
+                  poster {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
+          file(name: {eq: "vegetable-outlines-4898185-removebg-preview"}) {
+            publicURL
+            name
+          } 
+      `)
     return(
         <>
-            <TitleSection title='Oferta'/>
+            <TitleSection title={allDatoCmsPagepl.edges[0].node.titleOfferPl}/>
             <CardsWrapper image={file.publicURL}>
-                <div>
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[1].node.gatsbyImageData}
-                />
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[11].node.gatsbyImageData}
-                />
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[8].node.gatsbyImageData}
-                />
-                </div>
-                <div>
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[4].node.gatsbyImageData}
-                />
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[5].node.gatsbyImageData}
-                />
-                <Card 
-                    content='Producent warzyw obranych, gotowanych i pakowanych próżniowo Dzięki stosowaniu warzyw obranych nasi klienci oszczędzają na: Produkcie – dostajesz 100% użytecznego produktu / brak odpadków. wywoź odpadków (otarta skorka , opakowania) – 50% płatności za ścieki' 
-                    title='Warzywa obrane' 
-                    poster={allImageSharp.edges[6].node.gatsbyImageData}
-                />
-                </div>
+                {/* <div>
+                  {
+                    allDatoCmsPagepl.edges.map(({node}) =>
+                      <Card 
+                        content={node.offerCardPl.content}
+                        title={node.offerCardPl.title}
+                        poster={node.offerCardPl.poster.gatsbyImageData}
+                      />
+                    )
+                  }
+                </div> */}
             </CardsWrapper>
         </>
     )
