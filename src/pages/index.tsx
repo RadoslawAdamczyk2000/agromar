@@ -44,18 +44,27 @@ const HomePage = () => {
       />
       <Navigation pl={true} />
       <Hero
+        name='start'
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
       />
       <About
+        name='o-nas'
         title={anotherItem.titleAboutPl}
         content={anotherItem.contentAboutPl}
         extraContent={anotherItem.extraContentAboutPl}
         poster={anotherItem.posterAboutPl.gatsbyImageData}
       />
-      <Onions/>
-      <Cards pl={true}/>
-      <Contact/>
+      <Onions
+        pl={true}
+      />
+      <Cards 
+        name='oferty'
+        pl={true}
+      />
+      <Contact
+        name='kontakt'
+      />
     </Layout>
   )
 }

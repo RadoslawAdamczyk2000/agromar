@@ -42,7 +42,9 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation de={true}/>
+      <Navigation 
+        de={true}
+      />
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
@@ -53,8 +55,12 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         extraContent={anotherItem.extraContentAboutDe}
         poster={anotherItem.posterAboutDe.gatsbyImageData}
       />
-      <Onions/>
-      <Cards de={true}/>
+      <Onions
+        de={true}
+      />
+      <Cards 
+        de={true}
+      />
       <Contact/>
     </Layout>
   )

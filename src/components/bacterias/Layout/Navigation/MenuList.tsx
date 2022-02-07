@@ -25,10 +25,10 @@ const MenuList = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
             {
                 pl &&
                 <>
-                    <MenuItem path='/' title='start'/>
-                    <MenuItem path='/' title='o nas'/>
-                    <MenuItem path='/' title='oferta'/>
-                    <MenuItem path='/' title='kontakt'/>
+                    <MenuItem path='#start' title='start'/>
+                    <MenuItem path='#o-nas' title='o nas'/>
+                    <MenuItem path='#oferta' title='oferta'/>
+                    <MenuItem path='#kontakt' title='kontakt'/>
                 </>
             }
         </MenuListWrapper>

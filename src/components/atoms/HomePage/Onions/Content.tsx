@@ -3,9 +3,7 @@ import React from 'react';
 const Content = ({content}:{content:string}) => {
     return(
         <ContentWrapper>
-            <p>
-                {content}
-            </p>
+            <p dangerouslySetInnerHTML={{__html:content}}/>
         </ContentWrapper>
     )
 }

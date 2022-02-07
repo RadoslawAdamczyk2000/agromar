@@ -43,7 +43,9 @@ const CzechPage = () => {
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation cz={true} />
+      <Navigation 
+        cz={true} 
+      />
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
@@ -54,8 +56,12 @@ const CzechPage = () => {
           extraContent={anotherItem.extraContentAboutCz}
           poster={anotherItem.posterAboutCz.gatsbyImageData}
       />
-      <Onions/>
-      <Cards cz={true}/>
+      <Onions
+        cz={true}
+      />
+      <Cards 
+        cz={true}
+      />
       <Contact/>
     </Layout>
   )

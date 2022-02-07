@@ -3,9 +3,9 @@ import TitleWrapper from './styles/TitleWrapper';
 const Title = ({title}:{title:string}) => {
     return(
         <TitleWrapper>
-            <h3>
-                {title}
-            </h3>
+            <h3
+                dangerouslySetInnerHTML={{__html:title}}
+            />
         </TitleWrapper>
     )
 }
