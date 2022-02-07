@@ -45,6 +45,8 @@ const CzechPage = () => {
       />
       <Navigation 
         cz={true} 
+        pl={false}
+        de={false}
       />
       <Hero
         title={anotherItem.title}
@@ -58,9 +60,13 @@ const CzechPage = () => {
       />
       <Onions
         cz={true}
+        pl={false}
+        de={false}
       />
       <Cards 
         cz={true}
+        pl={false}
+        de={false}
       />
       <Contact/>
     </Layout>

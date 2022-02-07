@@ -42,14 +42,16 @@ const HomePage = () => {
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation pl={true} />
+      <Navigation 
+        pl={true} 
+        cz={false}
+        de={false}
+      />
       <Hero
-        name='start'
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
       />
       <About
-        name='o-nas'
         title={anotherItem.titleAboutPl}
         content={anotherItem.contentAboutPl}
         extraContent={anotherItem.extraContentAboutPl}
@@ -57,13 +59,15 @@ const HomePage = () => {
       />
       <Onions
         pl={true}
+        cz={false}
+        de={false}
       />
       <Cards 
-        name='oferty'
         pl={true}
+        cz={false}
+        de={false}
       />
       <Contact
-        name='kontakt'
       />
     </Layout>
   )

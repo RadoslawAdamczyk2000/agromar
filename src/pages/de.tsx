@@ -44,6 +44,8 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
       />
       <Navigation 
         de={true}
+        pl={false}
+        cz={false}
       />
       <Hero
         title={anotherItem.title}
@@ -57,9 +59,13 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
       />
       <Onions
         de={true}
+        pl={false}
+        cz={false}
       />
       <Cards 
         de={true}
+        pl={false}
+        cz={false}
       />
       <Contact/>
     </Layout>
