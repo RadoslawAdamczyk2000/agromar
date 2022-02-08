@@ -6,16 +6,19 @@ const Poster = ({poster}) => {
     const image = getImage(poster);
     return(
         <PosterWrapper>
-            <GatsbyImage 
-                alt='Agromar about image'
-                image={image} 
-                style={{
-                    height:'100%',
-                    objectFit:'cover',
-                    objectPosition:'center',
-                    width:'100%'
-                }}
-            />
+            {
+                image &&
+                <GatsbyImage 
+                    alt='Agromar about image'
+                    image={image} 
+                    style={{
+                        height:'100%',
+                        objectFit:'cover',
+                        objectPosition:'center',
+                        width:'100%'
+                    }}
+                />
+            }
         </PosterWrapper>
     )
 }

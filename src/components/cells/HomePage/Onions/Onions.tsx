@@ -4,7 +4,6 @@ import Box from '../../../bacterias/HomePage/Onions/Box';
 import Card from '../../../bacterias/HomePage/Onions/Card';
 import OnionsWrapper from './styles/OnionsWrapper';
 const Onions = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
-
   const {allDatoCmsPageCz,allDatoCmsPagede,allDatoCmsPagepl} = useStaticQuery(graphql`
   {
     allDatoCmsPagepl(filter: {id: {eq: "DatoCmsPagepl-104808178-pl"}}) {
@@ -54,9 +53,6 @@ const Onions = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
   const czQuery = allDatoCmsPageCz.edges[0].node;
   const deQuery = allDatoCmsPagede.edges[0].node;
   const plQuery =  allDatoCmsPagepl.edges[0].node;
-
-  console.log(allDatoCmsPageCz.edges[0].node.onioncard);
-
     return(
         <OnionsWrapper>
             {
