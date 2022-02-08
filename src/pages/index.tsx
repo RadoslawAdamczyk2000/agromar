@@ -68,6 +68,9 @@ const HomePage = () => {
         de={false}
       />
       <Contact
+        pl={true}
+        cz={false}
+        de={false}
       />
     </Layout>
   )

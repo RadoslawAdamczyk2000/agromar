@@ -68,7 +68,11 @@ const CzechPage = () => {
         pl={false}
         de={false}
       />
-      <Contact/>
+      <Contact
+        cz={true}
+        pl={false}
+        de={false}
+      />
     </Layout>
   )
 }

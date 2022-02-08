@@ -4,7 +4,7 @@ import Info from '../../../atoms/HomePage/Contact/Info';
 import Map from '../../../atoms/HomePage/Contact/Map';
 import Form from '../../../bacterias/HomePage/Contact/Form';
 import ContactWrapper from './styles/ContactWrapper';
-const Contact = () => {
+const Contact = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
     return(
         <ContactWrapper>
             <div className='content'>
@@ -12,7 +12,11 @@ const Contact = () => {
                     <Info/>
                     <Map/>
                 </div>
-                <Form/>
+                <Form
+                    cz={cz}
+                    de={de}
+                    pl={pl}
+                />
             </div>
             <Author/>
         </ContactWrapper>

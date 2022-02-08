@@ -1,12 +1,15 @@
 import React from 'react';
 import FormAreaWrapper from './styles/FormAreaWrapper';
-const FormArea = () => {
+const FormArea = ({inputName,label}:{inputName:string,label:string}) => {
     return(
         <FormAreaWrapper>
-            <label htmlFor='assdsa'>
-                Imię i nazwisko
+            <label htmlFor={inputName}>
+                {label}
             </label>
             <textarea
+                name={inputName}
+                id={inputName}
+                required
             />
         </FormAreaWrapper>
     )

@@ -67,7 +67,11 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         pl={false}
         cz={false}
       />
-      <Contact/>
+      <Contact
+        de={true}
+        pl={false}
+        cz={false}
+      />
     </Layout>
   )
 }
