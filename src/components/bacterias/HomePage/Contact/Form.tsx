@@ -3,9 +3,6 @@ import FormArea from '../../../atoms/HomePage/Contact/FormArea';
 import FormButton from '../../../atoms/HomePage/Contact/FormButton';
 import FormItem from '../../../atoms/HomePage/Contact/FormItem';
 const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
-    console.log(pl);
-    console.log(de);
-    console.log(cz);
     return(
         <form>
             {

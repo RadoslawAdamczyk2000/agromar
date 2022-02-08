@@ -35,7 +35,6 @@ const CzechPage = () => {
 `)
   const seoItem = allDatoCmsPageCz.edges[0].node.seocz;
   const anotherItem = allDatoCmsPageCz.edges[0].node;
-
   return(
     <Layout>
       <Seo

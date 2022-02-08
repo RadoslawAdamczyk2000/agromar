@@ -14,20 +14,24 @@ const Poster = () => {
         }
     `)
   const image = getImage(allImageSharp.edges[0].node.gatsbyImageData);
-  console.log(allImageSharp.edges[0])
     return(
-        <GatsbyImage 
-            image={image} 
-            alt='Hero Image Agromar'
-            style={{
-                height:'100%',
-                objectFit:'cover',
-                objectPosition:'center',
-                position:'relative',
-                width:'100%',
-                zIndex:-1
-            }}
-        />
+        <>
+        {
+            image &&
+            <GatsbyImage 
+                image={image} 
+                alt='Hero Image Agromar'
+                style={{
+                    height:'100%',
+                    objectFit:'cover',
+                    objectPosition:'center',
+                    position:'relative',
+                    width:'100%',
+                    zIndex:-1
+                }}
+            />
+        }
+        </>
     )
 }
 export default Poster;
