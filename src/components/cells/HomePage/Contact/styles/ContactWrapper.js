@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 const ContactWrapper = styled.div`
+    max-width:100vw;
     & > .content{
         display:grid;
         grid-template-columns:repeat(2,1fr);

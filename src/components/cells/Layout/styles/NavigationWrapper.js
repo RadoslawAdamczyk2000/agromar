@@ -8,13 +8,18 @@ const NavigationWrapper = styled.nav`
     height:7rem;
     position:sticky;
     top:0;
-    width:100%;
     z-index:999;
     & > menu{
         display:grid;
-        grid-template-columns:2fr 3fr 1fr;
+        grid-template-columns:5fr 1fr;
         height:7rem;
         width:100%;
+        @media only screen and (max-width:750px){
+            grid-template-columns:1fr;
+            & > span{
+                display:none;
+            }
+        }
     }
 `
 export default NavigationWrapper;

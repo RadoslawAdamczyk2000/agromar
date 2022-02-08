@@ -3,7 +3,7 @@ const CardWrapper = styled.div`
     background:lime;
     margin:auto;
     overflow:hidden;
-    max-width:95vw;
+    max-width:90vw;
     width:50rem;
     &:hover  > div {
         background-color:${({theme}) => theme.colors.celeste};

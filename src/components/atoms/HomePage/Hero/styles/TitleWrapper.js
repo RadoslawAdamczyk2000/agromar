@@ -14,9 +14,15 @@ const TitleWrapper = styled.div`
         width:55rem;
         & > h1{
             font-size:${({theme}) => theme.fonts.sizes.title};
+            @media only screen and (max-width:750px){
+                font-size:4rem;
+            }
         }
         & > h2{
             font-size:${({theme}) => theme.fonts.sizes.subtitle};
+            @media only screen and (max-width:750px){
+                font-size:3rem;
+            }
         }
     }
     @media only screen and (max-width:850px){

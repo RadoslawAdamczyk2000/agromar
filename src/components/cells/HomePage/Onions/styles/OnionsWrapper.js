@@ -5,6 +5,7 @@ const OnionsWrapper = styled.div`
     flex-direction:column;
     justify-content:center;
     margin:10rem auto;
+    max-width:100vw;
     width:85vw;
     & > * {
         text-align:center;

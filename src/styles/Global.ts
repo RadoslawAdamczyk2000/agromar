@@ -26,6 +26,8 @@ const Global = createGlobalStyle`
         font-family:${({theme}) => theme.fonts.family.secondary};
         font-size:1.6rem;
         font-weight:${({theme}) => theme.fonts.weights.regular};
+        overflow-x:hidden;
+        width:100vw;
     }
     html{
         font-size:62.5%;

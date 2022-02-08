@@ -11,6 +11,7 @@ const Poster = () => {
                 objectFit:'cover',
                 objectPosition:'center',
                 position:'relative',
+                maxWidth:'100vw',
                 width:'100%',
                 zIndex:-1
             }}

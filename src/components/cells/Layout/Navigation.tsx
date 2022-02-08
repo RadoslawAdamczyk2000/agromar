@@ -9,11 +9,6 @@ const Navigation = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
             <Brand/>
             <menu>
                 <span/>
-                <MenuList
-                    cz={cz}
-                    de={de}
-                    pl={pl}
-                />
                 <MenuLang/>
             </menu>
         </NavigationWrapper>
