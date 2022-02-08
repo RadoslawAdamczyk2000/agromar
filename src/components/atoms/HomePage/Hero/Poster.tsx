@@ -14,6 +14,7 @@ const Poster = () => {
         }
     `)
   const image = getImage(allImageSharp.edges[0].node.gatsbyImageData);
+  console.log(allImageSharp.edges[0])
     return(
         <GatsbyImage 
             image={image} 
