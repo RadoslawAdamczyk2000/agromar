@@ -6,7 +6,7 @@ const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
     return(
         <form 
             id="contactform" 
-            action="https://formsubmit.io/send/radoslaw.adamczyk2000@gmail.com" 
+            action="https://formsubmit.io/send/warzywapleszew@wp.pl" 
             method="POST"
         >
             <input name="_formsubmit_id" type="text" style={{display:"none"}}/>
