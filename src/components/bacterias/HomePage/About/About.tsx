@@ -4,7 +4,7 @@ import ExtraContent from '../../../atoms/HomePage/About/ExtraContent';
 import Poster from '../../../atoms/HomePage/About/Poster';
 import TitleSection from '../../../atoms/HomePage/About/TitleSection';
 import AboutWrapper from './styles/AboutWrapper';
-const About = ({title,content,extraContent,poster}) => {
+const About = ({buttonValue,title,content,extraContent,poster}) => {
     const [isOpen,setOpen] = useState(false);
     useEffect(() => {
         console.log(content);
@@ -21,6 +21,7 @@ const About = ({title,content,extraContent,poster}) => {
                 />
                 <Content 
                     behave={() => setOpen(!isOpen)}
+                    buttonValue={buttonValue}
                     content={content}
                 />
             </div>

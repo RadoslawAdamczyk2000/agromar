@@ -2,7 +2,7 @@ import React from 'react';
 import { content } from '../../../../types/types';
 import Button from './styles/Button';
 import ContentWrapper from './styles/ContentWrapper';
-const Content = ({behave,content}:{behave:Function,content:content}) => {
+const Content = ({behave,buttonValue,content}:{behave:Function,buttonValue:string,content:content}) => {
     return(
         <ContentWrapper>
             <p 
@@ -11,7 +11,7 @@ const Content = ({behave,content}:{behave:Function,content:content}) => {
                 dangerouslySetInnerHTML={{__html:content}}
             />
             <Button onClick={behave}>
-                Zobacz więcej
+                {buttonValue}
             </Button>
         </ContentWrapper>
     )

@@ -52,10 +52,11 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         subtitle={anotherItem.subtitle}
       />
       <About
-        title={anotherItem.titleAboutDe}
+        buttonValue='Mehr sehen'
         content={anotherItem.contentAboutDe}
         extraContent={anotherItem.extraContentAboutDe}
         poster={anotherItem.posterAboutDe.gatsbyImageData}
+        title={anotherItem.titleAboutDe}
       />
       <Onions
         de={true}

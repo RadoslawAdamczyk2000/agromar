@@ -4,11 +4,22 @@ import FormButton from '../../../atoms/HomePage/Contact/FormButton';
 import FormItem from '../../../atoms/HomePage/Contact/FormItem';
 const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
     return(
-        <form>
+        <form 
+            id="contactform" 
+            action="https://formsubmit.io/send/radoslaw.adamczyk2000@gmail.com" 
+            method="POST"
+        >
+            <input name="_formsubmit_id" type="text" style={{display:"none"}}/>
             {
                 cz &&
                 <>
                 <div>
+                    <input 
+                        name="_redirect" 
+                        type="hidden" 
+                        id="name" 
+                        value="https://agromar.netlify.app/cz"
+                    />               
                     <FormItem
                         label='Jméno a příjmení'
                         inputName='fullname'
@@ -40,6 +51,12 @@ const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
                 de &&
                 <>
                 <div>
+                    <input 
+                        name="_redirect" 
+                        type="hidden" 
+                        id="name" 
+                        value="https://agromar.netlify.app/de"
+                    />
                     <FormItem
                         label='Vorname und Nachname'
                         inputName='fullname'
@@ -71,6 +88,12 @@ const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
                 pl &&
                 <>
                 <div>
+                    <input 
+                        name="_redirect" 
+                        type="hidden" 
+                        id="name" 
+                        value="https://agromar.netlify.app/"
+                    />
                     <FormItem
                         label='Imię i nazwisko'
                         inputName='fullname'

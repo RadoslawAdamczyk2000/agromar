@@ -52,10 +52,11 @@ const CzechPage = () => {
         subtitle={anotherItem.subtitle}
       />
       <About
-          title={anotherItem.titleAboutCz}
+          buttonValue='Vidět víc'
           content={anotherItem.contentAboutCz}
           extraContent={anotherItem.extraContentAboutCz}
           poster={anotherItem.posterAboutCz.gatsbyImageData}
+          title={anotherItem.titleAboutCz}
       />
       <Onions
         cz={true}

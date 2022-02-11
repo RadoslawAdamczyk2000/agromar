@@ -52,10 +52,11 @@ const HomePage = () => {
         subtitle={anotherItem.subtitle}
       />
       <About
-        title={anotherItem.titleAboutPl ?? 'O nas'}
+        buttonValue='Zobacz więcej'
         content={anotherItem.contentAboutPl ?? 'Jakaś treść'}
         extraContent={anotherItem.extraContentAboutPl ?? 'Inna treść'}
         poster={anotherItem.posterAboutPl.gatsbyImageData}
+        title={anotherItem.titleAboutPl ?? 'O nas'}
       />
       <Onions
         pl={true}
