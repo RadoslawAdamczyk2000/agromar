@@ -4,8 +4,9 @@ import ExtraContentWrapper from './styles/ExtraContentWrapper';
 const ExtraContent = ({content,isOpen}:{content:content,isOpen:boolean}) => {
     return(
         <ExtraContentWrapper isOpen={isOpen}>
-            <p dangerouslySetInnerHTML={{__html:content}}>
-            </p>
+            <div 
+                dangerouslySetInnerHTML={{__html:content}}
+            />
         </ExtraContentWrapper>
     )
 }

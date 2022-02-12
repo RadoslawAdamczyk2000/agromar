@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 const CardWrapper = styled.div`
-    background:lime;
     margin:auto;
     overflow:hidden;
     max-width:90vw;

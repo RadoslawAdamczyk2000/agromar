@@ -11,8 +11,9 @@ const NavigationWrapper = styled.nav`
     z-index:999;
     & > menu{
         display:grid;
-        grid-template-columns:5fr 1fr;
+        grid-template-columns:3fr 1fr;
         height:7rem;
+        padding:0 1rem;
         width:100%;
         @media only screen and (max-width:750px){
             grid-template-columns:1fr;
