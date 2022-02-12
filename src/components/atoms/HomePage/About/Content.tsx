@@ -5,7 +5,7 @@ import ContentWrapper from './styles/ContentWrapper';
 const Content = ({behave,buttonValue,content}:{behave:Function,buttonValue:string,content:content}) => {
     return(
         <ContentWrapper>
-            <p 
+            <div 
                 className='content' 
                 id='contentAbout' 
                 dangerouslySetInnerHTML={{__html:content}}
