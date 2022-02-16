@@ -4,7 +4,7 @@ import Info from '../../../atoms/HomePage/Contact/Info';
 import Map from '../../../atoms/HomePage/Contact/Map';
 import Form from '../../../bacterias/HomePage/Contact/Form';
 import ContactWrapper from './styles/ContactWrapper';
-const Contact = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
+const Contact = ({cz,de,en,pl}:{cz:any,de:any,en:any,pl:any}) => {
     return(
         <ContactWrapper>
             <div className='content'>
@@ -15,6 +15,7 @@ const Contact = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
                 <Form
                     cz={cz}
                     de={de}
+                    en={en}
                     pl={pl}
                 />
             </div>

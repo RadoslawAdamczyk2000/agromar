@@ -5,8 +5,9 @@ const MenuLang = () => {
     return(
         <MenuLangWrapper>
             <LangItem path='/' title='PL'/>
-            <LangItem path='/cz' title='CZ'/>
+            <LangItem path='/en' title='EN'/>
             <LangItem path='/de' title='DE'/>
+            <LangItem path='/cz' title='CZ'/>
         </MenuLangWrapper>
     )
 }

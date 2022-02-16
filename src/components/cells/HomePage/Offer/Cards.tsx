@@ -3,8 +3,8 @@ import React from 'react';
 import TitleSection from '../../../atoms/HomePage/Offer/TitleSection';
 import Card from '../../../bacterias/HomePage/Offer/Card';
 import CardsWrapper from './styles/CardsWrapper';
-const Cards = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
-  const {allDatoCmsPageCz,allDatoCmsPagede,allDatoCmsPagepl,file} = useStaticQuery(graphql`
+const Cards = ({cz,de,en,pl}:{cz:any,de:any,en:any,pl:any}) => {
+  const {allDatoCmsPageCz,allDatoCmsPagede,allDatoCmsPageen,allDatoCmsPagepl,file} = useStaticQuery(graphql`
   {
     allDatoCmsPageCz(filter: {id: {eq: "DatoCmsPageCz-104825997-cs"}}) {
       edges {
@@ -48,6 +48,20 @@ const Cards = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
         }
       }
     }
+    allDatoCmsPageen(filter: {id: {eq: "DatoCmsPageen-108688745-en"}}) {
+    edges {
+      node {
+        titleOfferPl
+        offerCardPl {
+          title
+          content
+          poster {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
     file(name: {eq: "vegetable-outlines-4898185-removebg-preview"}) {
       publicURL
     } 
@@ -67,11 +81,25 @@ const Cards = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
               pl &&
               <TitleSection title={allDatoCmsPagepl.edges[0].node.titleOfferPl}/>
             }
+            {
+              en &&
+              <TitleSection title={allDatoCmsPageen.edges[0].node.titleOfferPl}/>
+            }
             <CardsWrapper image={file.publicURL}>
                 <div className='cards'>
                   {
                     pl &&
                     allDatoCmsPagepl.edges[0].node.offerCardPl.map( i =>
+                      <Card 
+                        content={i.content}
+                        title={i.title}
+                        poster={i.poster.gatsbyImageData}
+                      />
+                    )
+                  }
+                  {
+                    en &&
+                    allDatoCmsPageen.edges[0].node.offerCardPl.map( i =>
                       <Card 
                         content={i.content}
                         title={i.title}

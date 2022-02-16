@@ -42,11 +42,7 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
-      <Navigation 
-        de={true}
-        pl={false}
-        cz={false}
-      />
+      <Navigation/>
       <Hero
         title={anotherItem.title}
         subtitle={anotherItem.subtitle}
@@ -59,19 +55,22 @@ const anotherItem = allDatoCmsPagede.edges[0].node;
         title={anotherItem.titleAboutDe}
       />
       <Onions
-        de={true}
+        cz={false} 
+        en={false}
         pl={false}
-        cz={false}
+        de={true}
       />
       <Cards 
-        de={true}
+        cz={false} 
+        en={false}
         pl={false}
-        cz={false}
+        de={true}
       />
       <Contact
-        de={true}
+        cz={false} 
+        en={false}
         pl={false}
-        cz={false}
+        de={true}
       />
     </Layout>
   )

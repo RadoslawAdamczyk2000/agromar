@@ -2,7 +2,7 @@ import React from 'react';
 import FormArea from '../../../atoms/HomePage/Contact/FormArea';
 import FormButton from '../../../atoms/HomePage/Contact/FormButton';
 import FormItem from '../../../atoms/HomePage/Contact/FormItem';
-const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
+const Form = ({cz,de,en,pl}:{cz:any,de:any,en:any,pl:any}) => {
     return(
         <form 
             id="contactform" 
@@ -118,6 +118,43 @@ const Form = ({cz,de,pl}:{cz:any,de:any,pl:any}) => {
                 </div>
                 <FormButton
                     label='Wyślij'
+                />
+                </>
+            }
+            {
+                en &&
+                <>
+                <div>
+                    <input 
+                        name="_redirect" 
+                        type="hidden" 
+                        id="name" 
+                        value="https://agromar.netlify.app/en"
+                    />
+                    <FormItem
+                        label='Fullname'
+                        inputName='fullname'
+                        variant='text'
+                    />
+                    <div>
+                        <FormItem
+                            label='E-mail address'
+                            inputName='mail'
+                            variant='email'
+                        />
+                        <FormItem
+                            label='Phone number'
+                            inputName='phone'
+                            variant='tel'
+                        />
+                    </div>
+                    <FormArea
+                        inputName='message'
+                        label='Message'
+                    />
+                </div>
+                <FormButton
+                    label='Send'
                 />
                 </>
             }

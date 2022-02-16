@@ -8,12 +8,13 @@ import Contact from '../components/cells/HomePage/Contact/Contact';
 import Onions from '../components/cells/HomePage/Onions/Onions';
 import Seo from '../components/atoms/Layout/Seo';
 import { graphql, useStaticQuery } from 'gatsby';
-const HomePage = () => {
-  const {allDatoCmsPagepl} = useStaticQuery(graphql`
+const CzechPage = () => {
+  const {allDatoCmsPageen} = useStaticQuery(graphql`
     {
-      allDatoCmsPagepl(filter: {id: {eq: "DatoCmsPagepl-104808178-pl"}}) {
+      allDatoCmsPageen(filter: {id: {eq: "DatoCmsPageen-108688745-en"}}) {
         edges {
           node {
+            id
             seopl {
               title
               description
@@ -25,20 +26,18 @@ const HomePage = () => {
             extraContentAboutPl
             posterAboutPl {
               gatsbyImageData
-              path
-              url
             }
           }
         }
       }
     }
   `)
-  const seoItem = allDatoCmsPagepl.edges[0].node.seopl;
-  const anotherItem = allDatoCmsPagepl.edges[0].node;
+  const seoItem = allDatoCmsPageen.edges[0].node.seopl;
+  const anotherItem = allDatoCmsPageen.edges[0].node;
   return(
     <Layout>
       <Seo
-        language='pl'
+        language='en'
         metaTitle={seoItem.title}
         metaDescription={seoItem.description}
       />
@@ -48,32 +47,32 @@ const HomePage = () => {
         subtitle={anotherItem.subtitle}
       />
       <About
-        buttonValue='Zobacz więcej'
-        content={anotherItem.contentAboutPl ?? 'Jakaś treść'}
-        extraContent={anotherItem.extraContentAboutPl ?? 'Inna treść'}
-        poster={anotherItem.posterAboutPl.gatsbyImageData}
-        title={anotherItem.titleAboutPl ?? 'O nas'}
+          buttonValue='See more'
+          content={anotherItem.contentAboutPl}
+          extraContent={anotherItem.extraContentAboutPl}
+          poster={anotherItem.posterAboutPl.gatsbyImageData}
+          title={anotherItem.titleAboutPl}
       />
       <Onions
         cz={false} 
-        en={false}
-        pl={true}
+        en={true}
+        pl={false}
         de={false}
       />
       <Cards 
         cz={false} 
-        en={false}
-        pl={true}
+        en={true}
+        pl={false}
         de={false}
       />
       <Contact
         cz={false} 
-        en={false}
-        pl={true}
+        en={true}
+        pl={false}
         de={false}
       />
     </Layout>
   )
 }
 
-export default HomePage;
+export default CzechPage;
