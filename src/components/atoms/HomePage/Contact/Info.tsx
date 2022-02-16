@@ -51,8 +51,8 @@ const Info = () => {
                             <RiMailOpenLine/>
                         </span>
                         <div>
-                            <a href='mailto:warzywapleszew@wp.pl'>
-                                warzywapleszew@wp.pl
+                            <a href='mailto:warzywapleszew@gmail.com'>
+                                warzywapleszew@gmail.com
                             </a>
                         </div>
                     </ContactItemWrapper>
