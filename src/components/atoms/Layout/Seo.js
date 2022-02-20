@@ -6,6 +6,7 @@ const Seo = ({language,metaDescription,metaTitle}) => {
             <meta name='description' content={metaDescription}/>
             <title>{metaTitle}</title>
             <meta name="google-site-verification" content="zdMANyh-GmkUUmsGKRr65pKjvd5uYVnCG0rjkiRfjh8" />
+            <meta name="robots" content="index follow"/>
         </Helmet>
     )
 }
