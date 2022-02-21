@@ -56,6 +56,20 @@ const Info = () => {
                             </a>
                         </div>
                     </ContactItemWrapper>
+                    <ContactItemWrapper>
+                        <div>
+                            <p>
+                                <b>Agromar - Pacanowice 36 a, 63-300 Pleszew</b>
+                            </p>
+                        </div>
+                    </ContactItemWrapper>
+                    <ContactItemWrapper>
+                        <div>
+                            <p>
+                                <b>Numer Nip/VAT:</b> PL 6080034084
+                            </p>
+                        </div>
+                    </ContactItemWrapper>
                 </ul>
             </address>
         </div>
