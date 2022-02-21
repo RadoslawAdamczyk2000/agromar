@@ -31,6 +31,16 @@ const ContactItemWrapper = styled.li`
                 color:${({theme}) => theme.colors.emerald};
             }
         }
+          & > p{
+            color:${({theme}) => theme.colors.black};
+            font-size:1.75rem;
+            font-style:normal;
+            margin:auto 1rem;
+            transition:.12s linear color;
+            &:hover{
+                color:${({theme}) => theme.colors.emerald};
+            }
+        }
     }
 `
 export default ContactItemWrapper;
